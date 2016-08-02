@@ -13,6 +13,8 @@
 		588224FC1D51507D00250A03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 588224FB1D51507D00250A03 /* Assets.xcassets */; };
 		588224FF1D51507D00250A03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 588224FD1D51507D00250A03 /* LaunchScreen.storyboard */; };
 		5882250A1D51507D00250A03 /* ParserYalcinCakmakTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588225091D51507D00250A03 /* ParserYalcinCakmakTests.swift */; };
+		588225151D5155D700250A03 /* U70-Intro-Plain.txt in Resources */ = {isa = PBXBuildFile; fileRef = 588225141D5155D700250A03 /* U70-Intro-Plain.txt */; };
+		588225171D51561700250A03 /* FileParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588225161D51561700250A03 /* FileParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		588225051D51507D00250A03 /* ParserYalcinCakmakTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParserYalcinCakmakTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		588225091D51507D00250A03 /* ParserYalcinCakmakTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserYalcinCakmakTests.swift; sourceTree = "<group>"; };
 		5882250B1D51507D00250A03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		588225141D5155D700250A03 /* U70-Intro-Plain.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "U70-Intro-Plain.txt"; sourceTree = "<group>"; };
+		588225161D51561700250A03 /* FileParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 		588224E81D51507D00250A03 = {
 			isa = PBXGroup;
 			children = (
+				588225161D51561700250A03 /* FileParser.swift */,
+				588225141D5155D700250A03 /* U70-Intro-Plain.txt */,
 				588224F31D51507D00250A03 /* ParserYalcinCakmak */,
 				588225081D51507D00250A03 /* ParserYalcinCakmakTests */,
 				588224F21D51507D00250A03 /* Products */,
@@ -180,6 +186,7 @@
 				588224FF1D51507D00250A03 /* LaunchScreen.storyboard in Resources */,
 				588224FC1D51507D00250A03 /* Assets.xcassets in Resources */,
 				588224FA1D51507D00250A03 /* Main.storyboard in Resources */,
+				588225151D5155D700250A03 /* U70-Intro-Plain.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				588224F71D51507D00250A03 /* ViewController.swift in Sources */,
+				588225171D51561700250A03 /* FileParser.swift in Sources */,
 				588224F51D51507D00250A03 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
