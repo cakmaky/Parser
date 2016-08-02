@@ -12,7 +12,7 @@ class FileParser {
     
     private let fileHandle: NSFileHandle!
     
-    init(fileName: String, fileExt: String){
+    init?(fileName: String, fileExt: String){
         
         let bundle = NSBundle.mainBundle()
         
@@ -25,17 +25,17 @@ class FileParser {
             print("Error: could not find '\(fileName).\(fileExt)'")
             fileHandle = nil
         }
+        if fileHandle == nil {
+            return nil
+        }
     }
     func parseFile(){
     
-        if let fHandle = fileHandle {
-            
-            let fileData = fHandle.readDataToEndOfFile()
+            let fileData = fileHandle.readDataToEndOfFile()
             
             let dataString = String( data: fileData, encoding: 4)
             
             print("Here's the file: \(dataString)")
             
-        }
     }
 }

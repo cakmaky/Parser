@@ -13,9 +13,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let parser = FileParser(fileName: "U70-Intro-Plain", fileExt: "txt")
+        if let parser = FileParser(fileName: "U70-Intro-Plain", fileExt: "txt"){
         
         parser.parseFile()
     }
+  }
 }
-
