@@ -29,7 +29,7 @@ class FileParser {
             return nil
         }
     }
-    func parseFile(){
+    func parseFile() -> FileData? {
     
             let fileData = fileHandle.readDataToEndOfFile()
             
@@ -37,18 +37,24 @@ class FileParser {
             
         if dataString != nil {
             
-            parseString(dataString!)
+            let words = parseString(dataString!)
+            
+            return FileData(orderedWords: words)
+        } else {
+            return nil
         }
         
     }
     
-    func parseString(source: String){
+    func parseString(source: String) -> [String] {
         
         var currentIndex = source.startIndex
         
         let lastIndex = source.endIndex
         
         var wordStart: String.Index? = nil
+        
+        var words = [String]()
         
         while (currentIndex < lastIndex){
             
@@ -57,14 +63,14 @@ class FileParser {
                 if wordStart == nil {
                     
                     wordStart = currentIndex
+                }
        
                 } else {
                    
                     if wordStart != nil {
                         
                        let wordEnd = currentIndex.advancedBy(-1)
-                        
-                        print(source[wordStart!...wordEnd])
+                        words.append(source[wordStart!...wordEnd])
                         
                         wordStart = nil
                     }
@@ -74,11 +80,13 @@ class FileParser {
         }
             if (wordStart != nil){
                 
-                print(source[wordStart!...lastIndex.advancedBy(-1)])
+                words.append(source[wordStart!...lastIndex.advancedBy(-1)])
+                
             }
+            return words
     }
     
- }
+ 
     func isWordBreak(char: Character) -> Bool {
         
         switch char {

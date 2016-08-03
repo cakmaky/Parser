@@ -15,6 +15,7 @@
 		5882250A1D51507D00250A03 /* ParserYalcinCakmakTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588225091D51507D00250A03 /* ParserYalcinCakmakTests.swift */; };
 		588225151D5155D700250A03 /* U70-Intro-Plain.txt in Resources */ = {isa = PBXBuildFile; fileRef = 588225141D5155D700250A03 /* U70-Intro-Plain.txt */; };
 		588225171D51561700250A03 /* FileParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588225161D51561700250A03 /* FileParser.swift */; };
+		588225191D52A54D00250A03 /* FileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588225181D52A54D00250A03 /* FileData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		5882250B1D51507D00250A03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		588225141D5155D700250A03 /* U70-Intro-Plain.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "U70-Intro-Plain.txt"; sourceTree = "<group>"; };
 		588225161D51561700250A03 /* FileParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileParser.swift; sourceTree = "<group>"; };
+		588225181D52A54D00250A03 /* FileData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 		588224E81D51507D00250A03 = {
 			isa = PBXGroup;
 			children = (
+				588225181D52A54D00250A03 /* FileData.swift */,
 				588225161D51561700250A03 /* FileParser.swift */,
 				588225141D5155D700250A03 /* U70-Intro-Plain.txt */,
 				588224F31D51507D00250A03 /* ParserYalcinCakmak */,
@@ -207,6 +210,7 @@
 				588224F71D51507D00250A03 /* ViewController.swift in Sources */,
 				588225171D51561700250A03 /* FileParser.swift in Sources */,
 				588224F51D51507D00250A03 /* AppDelegate.swift in Sources */,
+				588225191D52A54D00250A03 /* FileData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

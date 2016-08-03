@@ -14,8 +14,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         if let parser = FileParser(fileName: "U70-Intro-Plain", fileExt: "txt"){
-        
-        parser.parseFile()
+            if let FileData = parser.parseFile() {
+                FileData.countWords()
+                print("\(FileData.countedWords)")
+            }
+        }
     }
-  }
 }
