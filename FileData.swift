@@ -33,5 +33,26 @@ class FileData {
         }
         countedWords = wordDict
     }
-    
+    func wordsOrderedByCount() -> [(String, Int)]{
+        if countedWords == nil {
+            countWords()
+            
+        }
+        var wordCounts = [(String, Int)]()
+        
+        for (eachKey, eachValue) in countedWords {
+            wordCounts.append(eachKey, eachValue)
+        }
+        wordCounts.sortInPlace(orderByCount)
+        
+        return wordCounts
+    }
+}
+
+func orderByCount (lhs:(String, Int), rhs:(String, Int)) -> Bool {
+    if lhs.1 > rhs.1 {
+        return true
+    } else {
+        return false
+    }
 }
