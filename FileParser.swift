@@ -35,7 +35,67 @@ class FileParser {
             
             let dataString = String( data: fileData, encoding: 4)
             
-            print("Here's the file: \(dataString)")
+        if dataString != nil {
             
+            parseString(dataString!)
+        }
+        
     }
+    
+    func parseString(source: String){
+        
+        var currentIndex = source.startIndex
+        
+        let lastIndex = source.endIndex
+        
+        var wordStart: String.Index? = nil
+        
+        while (currentIndex < lastIndex){
+            
+            if !isWordBreak(source[currentIndex]) {
+                
+                if wordStart == nil {
+                    
+                    wordStart = currentIndex
+       
+                } else {
+                   
+                    if wordStart != nil {
+                        
+                       let wordEnd = currentIndex.advancedBy(-1)
+                        
+                        print(source[wordStart!...wordEnd])
+                        
+                        wordStart = nil
+                    }
+                }
+            
+            currentIndex = currentIndex.advancedBy(1)
+        }
+            if (wordStart != nil){
+                
+                print(source[wordStart!...lastIndex.advancedBy(-1)])
+            }
+    }
+    
+ }
+    func isWordBreak(char: Character) -> Bool {
+        
+        switch char {
+        case " ", ".", ":",",","\n","(",")","-",";","“","”":
+            return true
+        default:
+            return false
+        }
+    }
+    
+
 }
+
+
+
+
+
+
+
+
