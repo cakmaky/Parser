@@ -87,15 +87,6 @@ class FileParser {
     }
     
  
-    /*func isWordBreak(char1: Character) -> Bool {
-     // This is the old isWordBreak() function
-        switch char {
-        case " ", ".", ":",",","\n","(",")","-",";","“","”":
-            return true
-        default:
-            return false
-        }
-    } */
     
     func isWordBreak(char1: Character, char2: Character) -> Bool {
         // This is my new isWordBreak() function for creative exercise 1

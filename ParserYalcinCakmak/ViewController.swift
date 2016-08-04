@@ -20,15 +20,20 @@ class ViewController: UITableViewController {
         if let parser = FileParser(fileName: "U70-Intro-Plain", fileExt: "txt"){
             if let fileData = parser.parseFile() {
                 
+                
                 fileData.countWords()
                 
                 sortedWords = fileData.wordsOrderedByCount()
+                
+                
+                
+                
                print("This is the words and counts of the first file. \n")
                print("\(sortedWords)")
             }
         }
         
-       // print("New file is starting\n")
+       
         if let parser2 = FileParser(fileName: "The Unicode Standard", fileExt: "txt"){
             if let fileData2 = parser2.parseFile() {
                 

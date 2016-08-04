@@ -51,13 +51,6 @@ class FileData {
     }
 }
 
-/*func orderByCount (lhs:(String, Int), rhs:(String, Int)) -> Bool { // this is the old orderByCount function
-    if lhs.1 > rhs.1 {
-        return true
-    } else {
-        return false
-    } */
-
 func orderByCount (lhs:(String, Int), rhs:(String, Int)) -> Bool {
     if lhs.1 > rhs.1 {
         return true
