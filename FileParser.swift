@@ -50,7 +50,7 @@ class FileParser {
         
         var currentIndex = source.startIndex
         
-        let lastIndex = source.endIndex
+        let lastIndex = source.endIndex.advancedBy(-1)
         
         var wordStart: String.Index? = nil
         
@@ -58,8 +58,8 @@ class FileParser {
         
         while (currentIndex < lastIndex){
             
-            if !isWordBreak(source[currentIndex]) {
-                
+            if !isWordBreak(source[currentIndex], char2: source[currentIndex.advancedBy(1)]) {
+                // We are sending two parameters to isWordBreak() function to improve the parser for creative exercise 1
                 if wordStart == nil {
                     
                     wordStart = currentIndex
@@ -80,25 +80,39 @@ class FileParser {
         }
             if (wordStart != nil){
                 
-                words.append(source[wordStart!...lastIndex.advancedBy(-1)])
+                words.append(source[wordStart!...lastIndex])
                 
             }
             return words
     }
     
  
-    func isWordBreak(char: Character) -> Bool {
-        
+    /*func isWordBreak(char1: Character) -> Bool {
+     // This is the old isWordBreak() function
         switch char {
         case " ", ".", ":",",","\n","(",")","-",";","“","”":
             return true
         default:
             return false
         }
+    } */
+    
+    func isWordBreak(char1: Character, char2: Character) -> Bool {
+        // This is my new isWordBreak() function for creative exercise 1
+        if ((char1 == "." || char1 == "," || char1 == ":") && (char2 == " " || char2 == "\n")){
+            return true
+        }
+        else if (char1 == " " || char1 == "\n" || char1 == "(" || char1 == ")" || char1 == "-" || char1 == ";" || char1 == "“" || char1 == "”"){
+            return true
+        }
+        else {
+            return false
+        }
     }
     
 
 }
+
 
 
 
