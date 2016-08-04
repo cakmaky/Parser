@@ -8,8 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UITableViewController {
 
+    var sortedWords: [(String, Int)]! = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -18,10 +20,46 @@ class ViewController: UIViewController {
                 
                 fileData.countWords()
                 
-                let sortedWords = fileData.wordsOrderedByCount()
+                sortedWords = fileData.wordsOrderedByCount()
                 print("\(sortedWords)")
             }
         }
     }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        if sortedWords == nil {
+            return 0
+            
+        } else {
+            return sortedWords!.count
+            
+        }
+    }
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("parserCell", forIndexPath: indexPath)
+        let currentItem: (String, Int) = sortedWords[indexPath.row]
+        let (word, wordCount) = currentItem
+        
+        cell.textLabel?.text = word
+        cell.detailTextLabel?.text = "\(wordCount)"
+        
+        return cell
+    }
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
